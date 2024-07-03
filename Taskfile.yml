@@ -5,7 +5,7 @@ version: "3"
 tasks:
   publish:
     vars:
-      DOCKER_IMAGE: platformplane/pause
+      DOCKER_IMAGE: ghcr.io/platformplane/pause
 
     cmds:
       - docker buildx build --push --platform linux/arm64,linux/amd64 --tag {{.DOCKER_IMAGE}} .
